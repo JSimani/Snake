@@ -1,5 +1,6 @@
 #ifndef	TERMFUNCS_H
 #define	TERMFUNCS_H
+// All credit goes to Laney Strange for these terminal functions!
 //
 // termfuncs.h -- some simple functions for using the terminal nicely
 //
