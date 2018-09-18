@@ -187,6 +187,7 @@ Game::~Game()
         }
         show_cursor();
         cout << NORMAL;
+        place_cursor(15,0);
 }
 
 /* run()
@@ -199,6 +200,7 @@ Game::~Game()
 void Game::run()
 {
         hide_cursor();
+        screen_clear();
         bake_food();
         print();
         cout << "Enter \'w\', \'a\', \'s\', or \'d\' to start!" << endl;
@@ -497,7 +499,7 @@ void Game::carry_body(int y_position, int x_position, int new_direction,
  */
 void Game::print()
 {
-        screen_clear();
+        screen_home();
         for (int i = 0; i < x_dimension + 2; i++) {
                 cout << RED_TEXT << BOLD << '_';
         }
@@ -543,7 +545,7 @@ void Game::print()
         for (int i = 0; i < x_dimension + 2; i++) {
                 cout << RED_TEXT << BOLD << '-';
         }
-        cout << NORMAL << endl << "Size: " << snake_size << endl;
+        cout << NORMAL << endl << "Size: " << snake_size << endl << endl;
 
 }
 
