@@ -185,9 +185,10 @@ Game::~Game()
 
                 delete[] board;
         }
+        end_game();
         show_cursor();
         cout << NORMAL;
-        place_cursor(15,0);
+        place_cursor(16,0);
 }
 
 /* run()
@@ -218,9 +219,6 @@ void Game::run()
                 move();
                 print();
         }
-
-        end_game();
-        
 }
 
 /* get_move()
